@@ -1048,5 +1048,55 @@
       "title": "Pillow Tabby Shoulder Bag 18",
       "price": "$395"
     }
+  ],
+  "cart": [
+    {
+      "id": 1,
+      "image": "https://images.coach.com/is/image/Coach/c6860_b4td3_a0?$desktopProductTile$",
+      "title": "Rogue Top Handle In Colorblock",
+      "price": "$695"
+    },
+    {
+      "id": 5,
+      "image": "https://images.coach.com/is/image/Coach/ch723_b4ha_a0?$desktopProductTile$",
+      "title": "Sammy Top Handle",
+      "price": "$550"
+    },
+    {
+      "id": 3,
+      "image": "https://images.coach.com/is/image/Coach/cf079_ec0_a0?$desktopProductTile$",
+      "title": "100 Percent Recycled Canvas Tote 42 With Camo Print And Rexy",
+      "price": "$195"
+    },
+    {
+      "id": 2,
+      "image": "https://images.coach.com/is/image/Coach/cc071_mi5_a0?$desktopProductTile$",
+      "title": "League Flap Backpack In Signature Jacquard",
+      "price": "$595"
+    },
+    {
+      "id": 4,
+      "image": "https://images.coach.com/is/image/Coach/ch735_lhvhm_a0?$desktopProductTile$",
+      "title": "Tabby Shoulder Bag 26",
+      "price": "$450"
+    },
+    {
+      "id": 8,
+      "image": "https://images.coach.com/is/image/Coach/ch802_b4u6_a0?$desktopProductTile$",
+      "title": "Bea Crossbody",
+      "price": "$275"
+    },
+    {
+      "id": 30,
+      "image": "https://images.coach.com/is/image/Coach/cd455_mgr_a0?$desktopProductTile$",
+      "title": "Retro Square Badge Sunglasses",
+      "price": "$170"
+    },
+    {
+      "id": 27,
+      "image": "https://images.coach.com/is/image/Coach/cf084_b4pj6_a0?$desktopProductTile$",
+      "title": "Field Tote 22 With Rexy",
+      "price": "$450"
+    }
   ]
 }
