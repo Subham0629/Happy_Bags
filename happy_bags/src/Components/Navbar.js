@@ -22,8 +22,21 @@ import {
     ChevronDownIcon,
     ChevronRightIcon,
   } from '@chakra-ui/icons';
+  import { useNavigate } from "react-router-dom";
+  import { BsCartCheck } from "react-icons/bs";
   
   export default function Navbar() {
+    let navigatehome = useNavigate(); 
+  const Imagehome = () =>{ 
+    let path = `/`; 
+    navigatehome(path);
+  }
+  let navigate = useNavigate(); 
+  const Gotocart = () =>{ 
+    let path = `/CartAdd`; 
+    navigate(path);
+  }
+
     const { isOpen, onToggle } = useDisclosure();
   
     return (
@@ -52,11 +65,11 @@ import {
             />
           </Flex>
           <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
-            <Text
+            <Text  _hover={{cursor:'pointer'}}  
               textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
               fontFamily={'heading'}
               color={useColorModeValue('gray.800', 'white')}>
-              <img  width="50px"  src="https://i.ibb.co/vkkdCG7/Happy-Bags.png" alt="logo" />
+              <img  width="50px"  onClick={Imagehome} src="https://i.ibb.co/vkkdCG7/Happy-Bags.png" alt="logo" />
             </Text>
   
             <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
@@ -90,6 +103,10 @@ import {
               }}>
               Sign Up
             </Button>
+            <Box _hover={{cursor:"pointer"}}>
+            <BsCartCheck  color="black" onClick={Gotocart} fontSize="30px"/>
+            </Box>
+            
           </Stack>
         </Flex>
   
@@ -248,14 +265,14 @@ import {
   const NAV_ITEMS = [
     {
       label: 'THE TABBY SHOP',
-      href: '#',
+      href: 'Tabbycollection',
     },
     {
       label: 'WOMEN',
-      href: '#',
+      href: 'Womens',
     },
     {
         label: 'MEN',
-        href: '#',
+        href: 'Mens',
       },
   ];
