@@ -36,6 +36,11 @@ import {
     let path = `/CartAdd`; 
     navigate(path);
   }
+  let nav = useNavigate(); 
+  const GotoAdmin = () =>{ 
+    let path = `/Adminlogin`; 
+    nav(path);
+  }
 
     const { isOpen, onToggle } = useDisclosure();
   
@@ -90,7 +95,7 @@ import {
               href={'#'}>
               Sign In
             </Button>
-            <Button
+            {/* <Button
               as={'a'}
               display={{ base: 'none', md: 'inline-flex' }}
               fontSize={'sm'}
@@ -102,11 +107,22 @@ import {
                 bg: 'pink.300',
               }}>
               Sign Up
-            </Button>
+            </Button> */}
             <Box _hover={{cursor:"pointer"}}>
             <BsCartCheck  color="black" onClick={Gotocart} fontSize="30px"/>
             </Box>
-            
+            <Button onClick={GotoAdmin}
+            display={{ base: 'none', md: 'inline-flex' }}
+            fontSize={'sm'}
+            fontWeight={600}
+            color={'white'}
+            bg={'blue.400'}
+            href={'#'}
+            _hover={{
+              bg: 'pink.300',
+            }}>
+            Admin
+          </Button>
           </Stack>
         </Flex>
   
