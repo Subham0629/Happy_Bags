@@ -5,6 +5,7 @@ import {
     HStack,
     Link,
     Stack,
+    Text,
     useColorModeValue as mode,
   } from '@chakra-ui/react'
   import { CartItem } from './CartItem'
@@ -79,7 +80,7 @@ import {
           <CartOrderSummary />
           <HStack mt="6" fontWeight="semibold">
             <p>or</p>
-            <Link  color={mode('blue.500', 'blue.200')}>Continue shopping</Link>
+            <Link href='/' color={mode('blue.500', 'blue.200')}><Text>Continue Shopping</Text> </Link>
           </HStack>
         </Flex>
       </Stack>

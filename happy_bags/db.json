@@ -7,12 +7,6 @@
       "price": "$695"
     },
     {
-      "id": 2,
-      "image": "https://images.coach.com/is/image/Coach/ch857_b4bk_a0?$desktopProductTile$",
-      "title": "Tabby Shoulder Bag 26",
-      "price": "$450"
-    },
-    {
       "id": 3,
       "image": "https://images.coach.com/is/image/Coach/ce730_v5v2r_a0?$desktopProductTile$",
       "title": "Brooke Carryall",
@@ -387,46 +381,17 @@
   ],
   "mens": [
     {
-      "id": 1,
-      "image": "https://images.coach.com/is/image/Coach/cc070_chk_a0?$desktopProductTile$",
-      "title": "Charter Slim Crossbody",
-      "price": "$225"
-    },
-    {
-      "id": 2,
-      "image": "https://images.coach.com/is/image/Coach/cc071_mi5_a0?$desktopProductTile$",
-      "title": "League Flap Backpack In Signature Jacquard",
-      "price": "$595"
-    },
-    {
-      "id": 3,
-      "image": "https://images.coach.com/is/image/Coach/cf079_ec0_a0?$desktopProductTile$",
-      "title": "100 Percent Recycled Canvas Tote 42 With Camo Print And Rexy",
-      "price": "$195"
-    },
-    {
-      "id": 4,
-      "image": "https://images.coach.com/is/image/Coach/ce477_cwh_a0?$desktopProductTile$",
-      "title": "Studio Messenger",
-      "price": "$695"
-    },
-    {
-      "id": 5,
-      "image": "https://images.coach.com/is/image/Coach/cg207_mvv_a0?$desktopProductTile$",
-      "title": "Frankie Backpack With Plaid Print",
-      "price": "$775"
-    },
-    {
-      "id": 6,
-      "image": "https://images.coach.com/is/image/Coach/ce472_chr_a0?$desktopProductTile$",
-      "title": "Hitch Backpack In Signature Canvas",
-      "price": "$650"
-    },
-    {
       "id": 7,
       "image": "https://images.coach.com/is/image/Coach/cg999_tnbk_a0?$desktopProductTile$",
       "title": "Lowline Low Top Sneaker In Signature Canvas",
-      "price": "$165"
+      "price": "$165",
+      "params": {
+        "q": {
+          "title": "shoe",
+          "image": "",
+          "price": ""
+        }
+      }
     },
     {
       "id": 8,
@@ -1097,6 +1062,12 @@
       "image": "https://images.coach.com/is/image/Coach/cf084_b4pj6_a0?$desktopProductTile$",
       "title": "Field Tote 22 With Rexy",
       "price": "$450"
+    },
+    {
+      "id": 9,
+      "image": "https://images.coach.com/is/image/Coach/cg971_vex_a0?$desktopProductTile$",
+      "title": "Disney X Coach Card Case In Regenerative Leather",
+      "price": "$95"
     }
   ]
 }
