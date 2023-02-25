@@ -35,24 +35,25 @@ import { AuthContext } from "../Context/AuthContext";
 import { useRef } from "react";
 //import Logout from './Logout';
 function EditModal({id,category}){
+
   const { isOpen, onOpen, onClose } = useDisclosure()
   const title = useRef(null)
   const image = useRef(null)
   const price = useRef(null)
   function handleEdit(id){
-    let query={title:title.current.value,
-      image:image.current.value,
-      price:price.current.value
-    }
+    // let query={title:title.current.value,
+    //   image:image.current.value,
+    //   price:price.current.value
+    // }
     console.log(id,category)
     axios.patch(`http://localhost:3000/${category}/${id}`, {
-     params: {
-       q: query
-     }
+        title:title.current.value,
+        image:image.current.value,
+        price:price.current.value
+      
    })
    .then(function (response) {
      console.log(response.data);
-     
    })
    .catch(function (error) {
      console.log(error);
@@ -185,7 +186,8 @@ useEffect(()=>{
                 <Td  className = "address" ><Image width="30%"  src={el.image}></Image></Td>
                 <Td className = "areaCode" >Rs {el.price}</Td>
                 <Td _hover={{cursor:"pointer"}} className = "edit"  >
-                  {/* <Button colorScheme="blue">Edit</Button>  */}<EditModal id={el.id} category={category}/ >
+                  {/* <Button colorScheme="blue">Edit</Button>  */}
+                  <EditModal id={el.id} category={category} get={()=>getData()} data={data} setData={setData}/ >
                 
                   
                  </Td>

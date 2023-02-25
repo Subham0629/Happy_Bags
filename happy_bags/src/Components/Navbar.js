@@ -1,3 +1,6 @@
+import { useAuth0 } from "@auth0/auth0-react";
+import Logout from "../Pages/Logout";
+import Login from "../Pages/Login";
 import {
     Box,
     Flex,
@@ -15,6 +18,8 @@ import {
     useBreakpointValue,
     useDisclosure,
     Input,
+    Heading,
+    Image,
   } from '@chakra-ui/react';
   import {
     HamburgerIcon,
@@ -26,6 +31,7 @@ import {
   import { BsCartCheck } from "react-icons/bs";
   
   export default function Navbar() {
+    const { user, isAuthenticated, isLoading ,logout} = useAuth0();
     let navigatehome = useNavigate(); 
   const Imagehome = () =>{ 
     let path = `/`; 
@@ -74,7 +80,7 @@ import {
               textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
               fontFamily={'heading'}
               color={useColorModeValue('gray.800', 'white')}>
-              <img  width="50px"  onClick={Imagehome} src="https://i.ibb.co/vkkdCG7/Happy-Bags.png" alt="logo" />
+              <Image  width="50px"  onClick={Imagehome} src="https://i.ibb.co/vkkdCG7/Happy-Bags.png" alt="logo" />
             </Text>
   
             <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
@@ -87,14 +93,16 @@ import {
             justify={'flex-end'}
             direction={'row'}
             spacing={6}>
-            <Button
+               {isAuthenticated && <Heading as="h6" size='sm' color="black">Welcome, {user.nickname}</Heading>}
+          {isAuthenticated ? <Logout/> :<Login/>}
+            {/* <Button
               as={'a'}
               fontSize={'sm'}
               fontWeight={400}
               variant={'link'}
               href={'#'}>
               Sign In
-            </Button>
+            </Button> */}
             {/* <Button
               as={'a'}
               display={{ base: 'none', md: 'inline-flex' }}
@@ -112,7 +120,7 @@ import {
             <BsCartCheck  color="black" onClick={Gotocart} fontSize="30px"/>
             </Box>
             <Button onClick={GotoAdmin}
-            display={{ base: 'none', md: 'inline-flex' }}
+            display={{ base: 'inline-flex', md: 'inline-flex' }}
             fontSize={'sm'}
             fontWeight={600}
             color={'white'}
@@ -141,7 +149,7 @@ import {
     return (
       <Stack direction={'row'} spacing={4}>
         {NAV_ITEMS.map((navItem) => (
-          <Box key={navItem.label}>
+          <Box key={navItem.label} pt="12px">
             <Popover trigger={'hover'} placement={'bottom-start'}>
               <PopoverTrigger>
                 <Link
