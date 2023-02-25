@@ -42,9 +42,9 @@ function Womens(){
      return (
     <> 
     <Heading  marginTop='40px' textAlign='left'>WOMEN'S STYLES</Heading>
-    <Stack bg='#E2E8F0' w='100%' h='350px' marginTop='20px' marginBottom='30px'>
+    <Stack bg='#E2E8F0' w='100%' h='auto' marginTop='20px' marginBottom='30px'>
     <Heading paddingTop='30px'>Women’s View All</Heading>
-    <Grid padding='50px' templateColumns='repeat(5, 1fr)' gap={6}>
+    <Grid padding='50px' templateColumns={{ base: 'repeat(2, 1fr)', md: 'repeat(3, 1fr)', lg: 'repeat(5, 1fr)' }} gap={6}>
       
       <Box >
       <Image
@@ -94,7 +94,7 @@ function Womens(){
       </Box>
       </Grid>
     </Stack>
-     <Grid templateColumns='repeat(5, 1fr)' gap={6}>
+     <Grid templateColumns={{ base: 'repeat(2, 1fr)', md: 'repeat(3, 1fr)', lg: 'repeat(5, 1fr)' }} gap={6}>
         {data.map((el)=>  (
         <Center key={el.id} py={12}>
           <Box  _hover={{bg:"gray",cursor:"pointer"}}
@@ -144,7 +144,7 @@ function Womens(){
               </Heading>
               <Stack direction={'row'} align={'center'}>
                 <Text fontWeight={800} fontSize={'xl'}>
-                  {el.price}
+                ${el.price}
                 </Text>
                 {/* <Text textDecoration={'line-through'} color={'gray.600'}>
                   {el.price+1000}
