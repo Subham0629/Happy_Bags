@@ -17,7 +17,7 @@ import {
  function CartAdd () {
     const [cartData,setData]=useState([])
     useEffect(()=>{
-        axios.get('http://localhost:3000/cart')
+        axios.get('https://happybag-json-server.onrender.com/cart')
       .then(function (response) {
         // handle success
         setData(response.data);

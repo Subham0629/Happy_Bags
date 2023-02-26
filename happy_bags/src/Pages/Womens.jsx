@@ -14,7 +14,7 @@ import {
   } from '@chakra-ui/react';
   import { Grid } from '@chakra-ui/react'
   function AddToCart(id,image,title,price){
-    axios.post("http://localhost:3000/cart", {
+    axios.post("https://happybag-json-server.onrender.com/cart", {
       id,image,title,price
     })
     .then(function (response) {
@@ -31,7 +31,7 @@ function Womens(){
     const [sort,setsort]=useState("")
     useEffect(()=>{
       if(sort){
-        axios.get(`http://localhost:3000/womens?_sort=price&_order=${sort}`)
+        axios.get(`https://happybag-json-server.onrender.com/womens?_sort=price&_order=${sort}`)
       .then(function (response) {
         // handle success
         setData(response.data);
@@ -41,7 +41,7 @@ function Womens(){
         console.log(error);
       })
       }else{
-        axios.get(`http://localhost:3000/womens`)
+        axios.get(`https://happybag-json-server.onrender.com/womens`)
       .then(function (response) {
         // handle success
         setData(response.data);

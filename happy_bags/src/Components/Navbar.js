@@ -69,7 +69,7 @@ import {
     const handleOnchange=(e)=>{
       let query=e.target.value
       console.log(query)
-      axios.get(`http://localhost:3000/mens`, {
+      axios.get(`https://happybag-json-server.onrender.com/mens`, {
        params: {
          q: query
        }

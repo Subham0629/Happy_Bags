@@ -20,7 +20,7 @@ export default function AdminAddProduct({category}) {
   let addressval=useRef()
   let codeval=useRef()
   const Submitdata=()=>{
-    axios.post(`http://localhost:3000/${category}`,{
+    axios.post(`https://happybag-json-server.onrender.com/${category}`,{
       title: ownerval.current.value,
       image: addressval.current.value,
       price: codeval.current.value,

@@ -46,7 +46,7 @@ function EditModal({id,category}){
     //   price:price.current.value
     // }
     console.log(id,category)
-    axios.patch(`http://localhost:3000/${category}/${id}`, {
+    axios.patch(`https://happybag-json-server.onrender.com/${category}/${id}`, {
         title:title.current.value,
         image:image.current.value,
         price:price.current.value
@@ -110,7 +110,7 @@ const[data,setData]=useState([])
 
 function getData(){
   if(category){
-    axios.get(`http://localhost:3000/${category}`)
+    axios.get(`https://happybag-json-server.onrender.com/${category}`)
     .then(function (response) {
       setData(response.data)
       
@@ -128,7 +128,7 @@ useEffect(()=>{
   const handleOnchange=(e)=>{
    let query=e.target.value
    console.log(query)
-   axios.get(`http://localhost:3000/${category}`, {
+   axios.get(`https://happybag-json-server.onrender.com/${category}`, {
     params: {
       q: query
     }
@@ -143,7 +143,7 @@ useEffect(()=>{
   }
   
  function handleDelete(id){
-  axios.delete(`http://localhost:3000/${category}/${id}`)
+  axios.delete(`https://happybag-json-server.onrender.com/${category}/${id}`)
   .then(function (response) {
     console.log(response);
     getData()

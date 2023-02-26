@@ -5,9 +5,7 @@ Happy Bags
 https://github.com/Subham0629/gentle-spark-3788
 
 ### Netlify Link-
-https://teal-sable-2f1698.netlify.app
-
-Note - Make sure that the json-server is up and running at port 3000
+https://cosmic-dieffenbachia-cb8e99.netlify.app/
 
 ### Component Structure-
 1. Components
