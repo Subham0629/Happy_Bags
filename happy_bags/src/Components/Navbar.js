@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useAuth0 } from "@auth0/auth0-react";
 import Logout from "../Pages/Logout";
 import Login from "../Pages/Login";
@@ -20,6 +21,7 @@ import {
     Input,
     Heading,
     Image,
+    Grid,Center,
   } from '@chakra-ui/react';
   import {
     HamburgerIcon,
@@ -29,6 +31,20 @@ import {
   } from '@chakra-ui/icons';
   import { useNavigate } from "react-router-dom";
   import { BsCartCheck } from "react-icons/bs";
+  import { useState } from "react";
+
+  function AddToCart(id,image,title,price){
+    axios.post("http://localhost:3000/cart", {
+      id,image,title,price
+    })
+    .then(function (response) {
+      console.log(response);
+      alert("Item added to Cart")
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+  }
   
   export default function Navbar() {
     const { user, isAuthenticated, isLoading ,logout} = useAuth0();
@@ -49,8 +65,26 @@ import {
   }
 
     const { isOpen, onToggle } = useDisclosure();
+    const[data,setData]=useState([])
+    const handleOnchange=(e)=>{
+      let query=e.target.value
+      console.log(query)
+      axios.get(`http://localhost:3000/mens`, {
+       params: {
+         q: query
+       }
+     })
+     .then(function (response) {
+       setData(response.data);
+     })
+     .catch(function (error) {
+       console.log(error);
+     })
+   
+     }
   
     return (
+      <>
       <Box>
         <Flex
           bg={useColorModeValue('white', 'gray.800')}
@@ -87,7 +121,7 @@ import {
               <DesktopNav />
             </Flex>
           </Flex>
-          <Input marginRight={100}  w={500} fontSize="18px" placeholder='Search for Products' />
+          <Input marginRight={100}  w={500} fontSize="18px" placeholder='Search for Products' onChange={handleOnchange}/>
           <Stack
             flex={{ base: 1, md: 0 }}
             justify={'flex-end'}
@@ -138,6 +172,75 @@ import {
           <MobileNav />
         </Collapse>
       </Box>
+
+      <Grid templateColumns={{ base: 'repeat(2, 1fr)', md: 'repeat(3, 1fr)', lg: 'repeat(5, 1fr)' }} gap={6} >
+        {data?.map((el)=>  (
+        <Center key={el.id} py={12}>
+          <Box  _hover={{bg:"gray",cursor:"pointer"}}
+            role={'group'}
+            p={6}
+            maxW={'330px'}
+            w={'full'}
+            boxShadow={'2xl'}
+            rounded={'lg'}
+            pos={'relative'}
+            zIndex={1}>
+            <Box
+              rounded={'lg'}
+              mt={-12}
+              pos={'relative'}
+              height={'230px'}
+              _after={{
+                transition: 'all .3s ease',
+                content: '""',
+                w: 'full',
+                h: 'full',
+                pos: 'absolute',
+                top: 5,
+                left: 0,
+                filter: 'blur(15px)',
+                zIndex: -1,
+              }}
+              _groupHover={{
+                _after: {
+                  filter: 'blur(20px)',
+                },
+              }}>
+              <Image
+                rounded={'lg'}
+                height={230}
+                width={282}
+                objectFit={'cover'}
+                src={el.image}
+              />
+            </Box>
+            <Stack pt={10} align={'center'}>
+              {/* <Text color={'gray.500'} fontSize={'sm'} textTransform={'uppercase'}>
+                {el.brand}
+              </Text> */}
+              <Heading fontSize={'md'} fontFamily={'body'} fontWeight={500}>
+                {el.title}
+              </Heading>
+              <Stack direction={'row'} align={'center'}>
+                <Text fontWeight={800} fontSize={'xl'}>
+                ${el.price}
+                </Text>
+                {/* <Text textDecoration={'line-through'} color={'gray.600'}>
+                  {el.price+1000}
+                </Text> */}
+              </Stack>  
+              <Stack direction={'row'} align={'center'}>
+              <Button onClick={()=>AddToCart(el.id,el.image,el.title,el.price)} variant='outline' colorScheme='blue'>
+                {/* onClick={()=>AddToCart(el.id,el.image,el.title,el.price)} */}
+            Add to cart
+          </Button>
+              </Stack>
+            </Stack>
+          </Box>
+        </Center>
+      ))}
+      </Grid>
+      </>
     );
   }
   

@@ -27,8 +27,10 @@ import {
 
 function Tabbycollection(){
     const [data,setData]=useState([])
+    const [sort,setsort]=useState("")
     useEffect(()=>{
-        axios.get('http://localhost:3000/tabbycollection')
+      if(sort){
+        axios.get(`http://localhost:3000/tabbycollection?_sort=price&_order=${sort}`)
       .then(function (response) {
         // handle success
         setData(response.data);
@@ -37,7 +39,18 @@ function Tabbycollection(){
         // handle error
         console.log(error);
       })
-    },[])
+      }else{
+        axios.get(`http://localhost:3000/tabbycollection`)
+      .then(function (response) {
+        // handle success
+        setData(response.data);
+      })
+      .catch(function (error) {
+        // handle error
+        console.log(error);
+      })
+      }
+    },[sort])
      return (
     <> 
    <Heading marginTop='40px' textAlign='left'>TABBY COLLECTION</Heading>
@@ -119,6 +132,14 @@ function Tabbycollection(){
       </Box>
       </Grid>
     </Stack>
+    <Button _hover={{bg:'black',color:'white'}} colorScheme='white' borderColor='black' borderWidth='1px' borderRadius='1px' color='black' marginTop='20px' fontSize='13px'
+    onClick={()=>setsort("asc")}
+    isDisabled={sort==="asc"}
+    >Price Low To High</Button>
+  <Button _hover={{bg:'black',color:'white'}} colorScheme='white' borderColor='black' borderWidth='1px' borderRadius='1px' color='black'marginTop='20px' marginLeft='10px' fontSize='13px'
+  onClick={()=>setsort("desc")}
+  isDisabled={sort==="desc"}
+  >Price High To Low</Button>
      <Grid templateColumns={{ base: 'repeat(2, 1fr)', md: 'repeat(3, 1fr)', lg: 'repeat(5, 1fr)' }} gap={6}>
         {data.map((el)=>  (
         <Center key={el.id} py={12}>

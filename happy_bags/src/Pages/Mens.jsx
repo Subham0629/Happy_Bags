@@ -26,9 +26,11 @@ import {
   }
 
 function Mens(){
+  const [sort,setsort]=useState("")
     const [data,setData]=useState([])
     useEffect(()=>{
-        axios.get('http://localhost:3000/mens')
+      if(sort){
+        axios.get(`http://localhost:3000/mens?_sort=price&_order=${sort}`)
       .then(function (response) {
         // handle success
         setData(response.data);
@@ -37,7 +39,18 @@ function Mens(){
         // handle error
         console.log(error);
       })
-    },[])
+      }else{
+        axios.get(`http://localhost:3000/mens`)
+      .then(function (response) {
+        // handle success
+        setData(response.data);
+      })
+      .catch(function (error) {
+        // handle error
+        console.log(error);
+      })
+      }
+    },[sort])
      return (
     <> <Heading marginTop='40px' textAlign='left'>MEN'S STYLES</Heading>
     <Stack bg='#E2E8F0' w='100%' h='auto' marginTop='20px' marginBottom='30px'>
@@ -92,6 +105,15 @@ function Mens(){
       </Box>
       </Grid>
     </Stack>
+    <Button _hover={{bg:'black',color:'white'}} colorScheme='white' borderColor='black' borderWidth='1px' borderRadius='1px' color='black' marginTop='20px' fontSize='13px'
+    onClick={()=>setsort("asc")}
+    isDisabled={sort==="asc"}
+    >Price Low To High</Button>
+  <Button _hover={{bg:'black',color:'white'}} colorScheme='white' borderColor='black' borderWidth='1px' borderRadius='1px' color='black'marginTop='20px' marginLeft='10px' fontSize='13px'
+  onClick={()=>setsort("desc")}
+  isDisabled={sort==="desc"}
+  >Price High To Low</Button>
+
      <Grid templateColumns={{ base: 'repeat(2, 1fr)', md: 'repeat(3, 1fr)', lg: 'repeat(5, 1fr)' }} gap={6} >
         {data.map((el)=>  (
         <Center key={el.id} py={12}>
