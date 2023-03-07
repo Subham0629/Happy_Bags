@@ -5,7 +5,7 @@ Happy Bags
 https://github.com/Subham0629/gentle-spark-3788
 
 ### Netlify Link-
-https://cosmic-dieffenbachia-cb8e99.netlify.app/
+https://happy-bags.vercel.app/
 
 ### Component Structure-
 1. Components
