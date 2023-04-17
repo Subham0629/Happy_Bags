@@ -7,13 +7,11 @@
 
 ## Tech Stack used
 - `REACT`
-- `REDUX`
 - `CHAKRA-UI`
 -  `JAVA SCRIPT`
 -  `HTML`
 -  `CSS`
 -  `JSON SERVER`
--  `Chart.js`
 
 ## Deployed Link
 https://happy-bags.vercel.app/
