@@ -31,7 +31,7 @@ https://happy-bags.vercel.app/
 # Snap shots
 <b> Home Page </b>
 
-![booking](https://ibb.co/0XC68hL)
+https://pasteboard.co/2djBfgp9G4tS.png
 
 
 <b> Tabby Shop Page </b>
@@ -54,4 +54,4 @@ https://happy-bags.vercel.app/
 ![booking2](https://ibb.co/27V9CkF)
 
 <b>Cart Page</b>
-<img src="[https://ibb.co/kXqD2yz](https://pasteboard.co/2djBfgp9G4tS.png)" alt="cart" />
+<img src="https://pasteboard.co/2djBfgp9G4tS.png" alt="cart" />
