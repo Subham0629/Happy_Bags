@@ -54,4 +54,4 @@ https://happy-bags.vercel.app/
 ![booking2](https://ibb.co/27V9CkF)
 
 <b>Cart Page</b>
-<img src="https://ibb.co/kXqD2yz" alt="cart" />
+<img src="[https://ibb.co/kXqD2yz](https://pasteboard.co/2djBfgp9G4tS.png)" alt="cart" />
