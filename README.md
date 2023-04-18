@@ -31,7 +31,7 @@ https://happy-bags.vercel.app/
 # Snap shots
 <b> Home Page </b>
 
-https://pasteboard.co/2djBfgp9G4tS.png
+![Screenshot (676)](https://user-images.githubusercontent.com/112814727/232678713-5f08dc7b-b2d4-4188-93dd-dd36cb624082.png)
 
 
 <b> Tabby Shop Page </b>
