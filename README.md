@@ -35,30 +35,30 @@ https://happy-bags.vercel.app/
 
 </br>
 </br>
-<b> Tabby Shop Page </b>
+# Tabby Shop Page 
 
 ![Screenshot (677)](https://user-images.githubusercontent.com/112814727/232679077-882bc52e-2220-45a8-a81e-f762434749a0.png)
 
 </br>
 </br>
-<b> Women Page </b>
+# Women Page 
 
 ![Screenshot (678)](https://user-images.githubusercontent.com/112814727/232679341-d2581f1b-795e-49d4-961e-145a52a21add.png)
 
 </br>
 </br>
-<b> Men Page </b>
+# Men Page 
 
 ![Screenshot (679)](https://user-images.githubusercontent.com/112814727/232679411-358f4767-a4f9-4483-bd8b-9935db5a44cd.png)
 </br>
 </br>
-<b>Login/Signup Page</b>
+# Login/Signup Page
 ![Screenshot (680)](https://user-images.githubusercontent.com/112814727/232679483-eea9c13e-f5ef-48fc-bd4a-a4ac2c814ff0.png)
 </br>
 </br>
-<b>Admin Page</b>
+# Admin Page
 ![Screenshot (681)](https://user-images.githubusercontent.com/112814727/232679558-6ff2afcd-cbef-4811-8452-e63363bd31b4.png)
 </br>
 </br>
-<b>Cart Page</b>
+# Cart Page
 ![Screenshot (682)](https://user-images.githubusercontent.com/112814727/232679631-7347b095-dc81-4ef5-a5b2-f1d4f693a446.png)
