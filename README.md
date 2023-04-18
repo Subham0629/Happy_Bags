@@ -33,10 +33,12 @@ https://happy-bags.vercel.app/
 
 ![Screenshot (676)](https://user-images.githubusercontent.com/112814727/232678713-5f08dc7b-b2d4-4188-93dd-dd36cb624082.png)
 
-
+</br>
+</hr>
+</br>
 <b> Tabby Shop Page </b>
 
-![Hotels](https://ibb.co/TmWxXJY)
+![Screenshot (677)](https://user-images.githubusercontent.com/112814727/232679077-882bc52e-2220-45a8-a81e-f762434749a0.png)
 
 
 <b> Women Page </b>
