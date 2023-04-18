@@ -57,8 +57,9 @@ https://happy-bags.vercel.app/
 </br>
 </br>
 # Admin Page
-![Screenshot (681)](https://user-images.githubusercontent.com/112814727/232679558-6ff2afcd-cbef-4811-8452-e63363bd31b4.png)
+![Screenshot (682)](https://user-images.githubusercontent.com/112814727/232679631-7347b095-dc81-4ef5-a5b2-f1d4f693a446.png)
 </br>
 </br>
 # Cart Page
-![Screenshot (682)](https://user-images.githubusercontent.com/112814727/232679631-7347b095-dc81-4ef5-a5b2-f1d4f693a446.png)
+![Screenshot (681)](https://user-images.githubusercontent.com/112814727/232679558-6ff2afcd-cbef-4811-8452-e63363bd31b4.png)
+
